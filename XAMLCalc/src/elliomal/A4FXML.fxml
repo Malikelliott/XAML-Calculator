@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.*?>
+
+<BorderPane prefWidth="510" prefHeight="100" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elliomal.A4FXMLController">
+    <top>
+        <Label text="Advanced Calculator" BorderPane.alignment="CENTER"/><!-->Top label<!-->
+    </top>
+
+    <center>
+        <VBox>
+            <HBox>
+                
+                <!-->X= label<!-->
+                <Label text="X=" BorderPane.alignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="4.0" left="0.0" top="0.0" bottom="0.0" />
+                    </GridPane.margin>
+                </Label>
+                <!-->X= field<!-->
+                <TextField fx:id="xField" BorderPane.alignment="CENTER"/>
+
+                <!-->Y= label<!-->
+                <Label text="Y=" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets right="4.0" left="0.0" top="0.0" bottom="0.0" />
+                    </BorderPane.margin>
+                </Label>
+                <!-->Y= field<!-->
+                <TextField fx:id="yField" BorderPane.alignment="CENTER"/>
+                
+            </HBox>
+            
+            <!-->Result label<!-->
+            <Label fx:id="lblRes" text=" " BorderPane.alignment="CENTER">
+                <GridPane.margin>
+                    <Insets right="0.0" left="4.0" top="0.0" bottom="0.0" />
+                </GridPane.margin>
+            </Label>
+            <!-->Image<!-->
+            <ImageView fx:id="imgMain" fitWidth="122" fitHeight="122" 
+                       preserveRatio="true" BorderPane.alignment="CENTER" onMouseClicked="#swap">
+                <image>
+                    <Image url="@cal1.png" />
+                </image>
+            </ImageView>
+            
+        </VBox> 
+    </center>
+        
+    
+    <left>
+        <!-->Left side buttons<!-->
+        <VBox prefWidth="88">
+            <Button fx:id="xPowY" text="X^Y" prefWidth="88"/>
+            <Button fx:id="max" text="Max" prefWidth="88"/>
+            <Button fx:id="min" text="Min" prefWidth="88"/>
+            <Button fx:id="evenOdd" text="Even or Odd" prefWidth="88"/>
+        </VBox>
+    </left>
+    
+    <right>
+        <!-->Right side buttons<!-->
+        <VBox prefWidth="88">
+            <Button fx:id="clearX" text="Clear X" prefWidth="88"/>
+            <Button fx:id="clearY" text="Clear Y" prefWidth="88"/>
+            <Button fx:id="clearBoth" text="Clear X and Y" prefWidth="88"/>
+            <Button fx:id="exit" text="Exit" prefWidth="88"/>
+        </VBox>
+    </right>
+</BorderPane>
